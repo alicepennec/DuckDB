@@ -6,7 +6,7 @@ csv_path = '/data/covid.csv'
 parquet_path = '/data/covid.parquet'
 
 if not os.path.exists(csv_path):
-    raise FileNotFoundError(f"❌ Le fichier {csv_path} est introuvable. Vérifie le montage du volume Docker.")
+    raise FileNotFoundError(f"❌ Le fichier {csv_path} est introuvable.")
 
 # Connexion à la base DuckDB
 con = duckdb.connect(database='/data/my_database.duckdb', read_only=False)

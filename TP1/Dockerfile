@@ -3,8 +3,8 @@ FROM python:3.11-slim
 # Créer le dossier de travail
 WORKDIR /app
 
-# Installer DuckDB et pandas
-RUN pip install --no-cache-dir duckdb pandas
+# Installer pandas duckdb
+RUN pip install --no-cache-dir pandas duckdb
 
 # Copier le script dans le conteneur
 COPY script_duckdb.py .

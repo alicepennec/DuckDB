@@ -5,5 +5,4 @@ services:
     build: .
     volumes:
       - ./data:/data
-    container_name: duckdb
     command: python /app/script_duckdb.py

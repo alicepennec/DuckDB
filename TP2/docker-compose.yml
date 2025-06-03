@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  etl:
+    build: .
+    container_name: duckdb_etl
+    volumes:
+      - ./data:/data
+    restart: unless-stopped

@@ -1,0 +1,2 @@
+*/5 * * * * root python /app/etl_pipeline_duckdb.py >> /data/cron.log 2>&1
+
