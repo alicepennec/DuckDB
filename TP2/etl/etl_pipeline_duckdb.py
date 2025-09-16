@@ -3,21 +3,25 @@ import requests
 import pandas as pd
 import logging
 import os
+from dotenv import load_dotenv
 
 # Initialisation du logger
 logging.basicConfig(
-    filename="/data/etl.log",
+    filename="../../shared_data/etl.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-db_path="/data/database_API.duckdb"
+load_dotenv()
+# Récupérer les variables
+URL_WEATHER = os.getenv("URL_WEATHER")
+API_KEY = os.getenv("API_KEY")
 
-api_key = "300e45999bbcb67591f843c8f5f1917d"
+db_path="../../shared_data/database_API.duckdb"
 city = "Paris"
 
 # Récupération API
-url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid={}&units=metric'.format(city, api_key)
+url = f"{URL_WEATHER}?q={city}&appid={API_KEY}&units=metric"
 
 try:
     data = requests.get(url).json()
@@ -57,7 +61,7 @@ except Exception as e:
     raise
 
 try:
-    df.to_parquet("/data/weather_data.parquet")
+    df.to_parquet("../../shared_data/weather_data.parquet")
     logging.info("Dataframe saved to parquet file successfully")
 except Exception as e:
     logging.error(f"Failed to saved Dataframe to Parquet file: {e}")
