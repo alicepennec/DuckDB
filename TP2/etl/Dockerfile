@@ -11,15 +11,14 @@ COPY requirements.txt .
 # Installer requirements
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN mkdir -p /data
+
 # Copier le script dans le conteneur
 COPY etl_pipeline_duckdb.py .
 COPY crontab.txt /etc/cron.d/etl-cron
 
 # Donner les droits à la crontab
 RUN chmod 0644 /etc/cron.d/etl-cron 
-
-# Monter volume de logs et base persistante
-VOLUME [ "/data" ]
 
 # Point d'entrée
 CMD ["cron", "-f"]

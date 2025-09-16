@@ -1,8 +1,0 @@
-version: '3.8'
-
-services:
-  duckdb:
-    build: .
-    volumes:
-      - ./data:/data
-    command: python /app/script_duckdb.py

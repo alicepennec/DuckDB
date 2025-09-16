@@ -3,13 +3,14 @@ import time
 import os
 
 csv_path = '/data/covid.csv'
+db_path = '/data/my_database.duckdb'
 parquet_path = '/data/covid.parquet'
 
 if not os.path.exists(csv_path):
     raise FileNotFoundError(f"❌ Le fichier {csv_path} est introuvable.")
 
 # Connexion à la base DuckDB
-con = duckdb.connect(database='/data/my_database.duckdb', read_only=False)
+con = duckdb.connect(database=db_path)
 
 # Charger le CSV et renommer les colonnes
 print("Loading CSV...")

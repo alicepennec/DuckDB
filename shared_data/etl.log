@@ -1,0 +1,78 @@
+2025-09-16 11:12:38,551 - INFO - Request to https://world.openfoodfacts.net/api/v2/search successful
+2025-09-16 11:12:38,552 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:12:38,552 - ERROR - Failed to treat data: ['product_name']
+2025-09-16 11:18:36,578 - INFO - Request to https://world.openfoodfacts.net/api/v2/search successful
+2025-09-16 11:18:36,579 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:18:36,586 - ERROR - Failed to treat data: unhashable type: 'list'
+2025-09-16 11:34:58,538 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Annecy&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-16 11:34:58,538 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:34:58,547 - INFO - Data treatment successful
+2025-09-16 11:34:58,555 - ERROR - Failed to connect to DuckDB
+2025-09-16 11:35:53,777 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Annecy&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-16 11:35:53,778 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:35:53,781 - INFO - Data treatment successful
+2025-09-16 11:35:53,786 - ERROR - Failed to connect to DuckDB
+2025-09-16 11:38:25,280 - INFO - Request to http://api.openweathermap.org/geo/1.0/direct?q=Annecy&limit=5&appid={api_key} successful
+2025-09-16 11:38:25,281 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:38:25,283 - INFO - Data treatment successful
+2025-09-16 11:38:25,289 - ERROR - Failed to connect to DuckDB
+2025-09-16 11:38:57,831 - INFO - Request to http://api.openweathermap.org/geo/1.0/direct?q=Annecy&limit=5&appid={api_key} successful
+2025-09-16 11:38:57,832 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:38:57,833 - INFO - Data treatment successful
+2025-09-16 11:38:57,838 - ERROR - Failed to connect to DuckDB
+2025-09-16 11:39:48,479 - INFO - Request to http://api.openweathermap.org/geo/1.0/direct?q=Annecy&limit=5&appid={api_key} successful
+2025-09-16 11:39:48,480 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:39:48,482 - INFO - Data treatment successful
+2025-09-16 11:39:48,496 - INFO - Connection to DuckDB successful
+2025-09-16 11:39:48,503 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 11:39:48,740 - INFO - Dataframe saved to parquet file successfully
+2025-09-16 11:39:48,745 - INFO - Weather table created/updated
+2025-09-16 11:42:10,330 - INFO - Request to http://api.openweathermap.org/geo/1.0/zip?zip={zip_code}&appid={api_key} successful
+2025-09-16 11:42:10,331 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:42:10,333 - INFO - Data treatment successful
+2025-09-16 11:42:10,409 - ERROR - Failed to connect to DuckDB
+2025-09-16 11:42:26,948 - INFO - Request to http://api.openweathermap.org/geo/1.0/zip?zip={zip_code}&appid={api_key} successful
+2025-09-16 11:42:26,949 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:42:26,951 - INFO - Data treatment successful
+2025-09-16 11:42:26,968 - INFO - Connection to DuckDB successful
+2025-09-16 11:42:26,974 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 11:42:26,988 - INFO - Dataframe saved to parquet file successfully
+2025-09-16 11:42:26,994 - INFO - Weather table created/updated
+2025-09-16 11:45:03,137 - INFO - Request to http://api.openweathermap.org/geo/1.0/zip?zip={country_code}&appid={api_key} successful
+2025-09-16 11:45:03,138 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:45:03,141 - INFO - Data treatment successful
+2025-09-16 11:45:03,154 - INFO - Connection to DuckDB successful
+2025-09-16 11:45:03,158 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 11:45:03,174 - INFO - Dataframe saved to parquet file successfully
+2025-09-16 11:45:03,180 - INFO - Weather table created/updated
+2025-09-16 11:47:09,811 - INFO - Request to http://api.openweathermap.org/geo/1.0/zip?zip={zip_code},{country_code}&appid={api_key} successful
+2025-09-16 11:47:09,812 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:47:09,815 - INFO - Data treatment successful
+2025-09-16 11:47:09,836 - INFO - Connection to DuckDB successful
+2025-09-16 11:47:09,842 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 11:47:09,857 - INFO - Dataframe saved to parquet file successfully
+2025-09-16 11:47:09,866 - INFO - Weather table created/updated
+2025-09-16 11:52:20,360 - INFO - Request to http://api.openweathermap.org/geo/1.0/direct?q={city}&limit={limit}&appid={api_key} successful
+2025-09-16 11:52:20,361 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:52:20,363 - INFO - Data treatment successful
+2025-09-16 11:52:20,381 - INFO - Connection to DuckDB successful
+2025-09-16 11:52:20,387 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 11:52:20,401 - INFO - Dataframe saved to parquet file successfully
+2025-09-16 11:52:20,406 - INFO - Weather table created/updated
+2025-09-16 11:53:18,856 - INFO - Request to http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={api_key} successful
+2025-09-16 11:53:18,857 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:53:18,859 - INFO - Data treatment successful
+2025-09-16 11:53:18,877 - INFO - Connection to DuckDB successful
+2025-09-16 11:53:18,883 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 11:53:18,900 - INFO - Dataframe saved to parquet file successfully
+2025-09-16 11:53:18,907 - INFO - Weather table created/updated
+2025-09-16 11:57:18,790 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-16 11:57:18,793 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:57:18,796 - ERROR - Failed to treat data: unhashable type: 'list'
+2025-09-16 11:58:07,300 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-16 11:58:07,301 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 11:58:07,302 - INFO - Data treatment successful
+2025-09-16 11:58:07,320 - INFO - Connection to DuckDB successful
+2025-09-16 11:58:07,331 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 11:58:07,353 - INFO - Dataframe saved to parquet file successfully
+2025-09-16 11:58:07,363 - INFO - Weather table created/updated
