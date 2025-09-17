@@ -5,7 +5,7 @@ import duckdb
 # Bases de données disponibles
 db_files = {
     "Covid": "/data/my_database.duckdb",
-    "Products": "/data/database_API.duckdb"
+    "Weather": "/data/database_api.duckdb"
 }
 
 st.set_page_config(layout="wide")
@@ -26,22 +26,33 @@ tables = con.execute("SHOW TABLES").fetchdf()
 if tables.empty:
     st.warning(f"Aucune table trouvée dans `{db_choice}`.")
 else:
-    # --- Choix de la table ---
-    table_choice = st.sidebar.selectbox("Choisir une table :", tables["name"])
+    st.subheader(f"Tables disponibles dans `{db_choice}`")
 
-    # --- Aperçu des données ---
-    df = con.execute(f"SELECT * FROM {table_choice} LIMIT 100").fetchdf()
+    for table_name in tables["name"]:
+        st.markdown(f"### 📊 Table `{table_name}`")
 
-    st.subheader(f"Aperçu de la table `{table_choice}`")
-    st.dataframe(df, use_container_width=True)
+        # Aperçu limité à 100 lignes
+        df = con.execute(f"SELECT * FROM {table_name} LIMIT 100").fetchdf()
+        st.dataframe(df, use_container_width=True)
+        
+        # Requêtes sur les bases
+        query = st.text_area("Entrez votre requête SQL :", "SELECT * from {table_name}")
+        if st.button("Exécuter la requête"):
+            try:
+                df = con.execute(query).fetchdf()
+                st.success(f"Requête exécutée avec succès")
+                st.dataframe(df)
+            except Exception as e:
+                st.error(f"Erreur dans la requête : {e}")
 
-    # --- Téléchargement CSV ---
-    st.download_button(
-        label="📥 Télécharger en CSV",
-        data=df.to_csv(index=False),
-        file_name=f"{table_choice}.csv",
-        mime="text/csv"
-    )
+        # Bouton de téléchargement
+        st.download_button(
+            label=f"📥 Télécharger `{table_name}` en CSV",
+            data=df.to_csv(index=False),
+            file_name=f"{table_name}.csv",
+            mime="text/csv"
+        )
+        st.markdown("---")
 
 # Fermeture connexion
 con.close()
