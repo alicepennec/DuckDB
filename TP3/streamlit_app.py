@@ -5,7 +5,8 @@ import duckdb
 # Bases de données disponibles
 db_files = {
     "Covid": "/data/my_database.duckdb",
-    "Weather": "/data/database_api.duckdb"
+    "Weather": "/data/database_api.duckdb",
+    "Jeux": "/data/jo_database.duckdb"
 }
 
 st.set_page_config(layout="wide")
@@ -26,8 +27,6 @@ tables = con.execute("SHOW TABLES").fetchdf()
 if tables.empty:
     st.warning(f"Aucune table trouvée dans `{db_choice}`.")
 else:
-    st.subheader(f"Tables disponibles dans `{db_choice}`")
-
     for table_name in tables["name"]:
         st.markdown(f"### 📊 Table `{table_name}`")
 
@@ -52,6 +51,12 @@ else:
             file_name=f"{table_name}.csv",
             mime="text/csv"
         )
+        
+        # Suppression de table
+        if st.button("❌ Supprimer la table"):
+            df = con.execute(f"DROP table {table_name}").fetchdf()
+        
+        
         st.markdown("---")
 
 # Fermeture connexion
