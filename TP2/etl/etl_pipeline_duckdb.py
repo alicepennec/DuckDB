@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 # Initialisation du logger
 logging.basicConfig(
-    filename="../../shared_data/etl.log",
+    filename="/data/etl.log",
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
@@ -17,7 +17,7 @@ load_dotenv()
 URL_WEATHER = os.getenv("URL_WEATHER")
 API_KEY = os.getenv("API_KEY")
 
-db_path="../../shared_data/database_API.duckdb"
+db_path="/data/database_API.duckdb"
 city = "Paris"
 
 # Récupération API
@@ -43,7 +43,15 @@ try:
 except Exception as e:
     logging.error(f"Failed to treat data: {e}")
     raise
+print(df)
 
+try:
+    df = df.drop(columns=['weather', 'base', 'visibility', 'dt', 'timezone', 'wind.deg', 'sys.type', 'sys.id'])
+    logging.info("Columns dropped successfully")
+except Exception as e:
+    logging.error(f"Failed to drop columns: {e}")
+    raise
+print(df)
 try:
     con = duckdb.connect(database=db_path)
     logging.info("Connection to DuckDB successful")
@@ -61,7 +69,7 @@ except Exception as e:
     raise
 
 try:
-    df.to_parquet("../../shared_data/weather_data.parquet")
+    df.to_parquet("/data/weather_data.parquet")
     logging.info("Dataframe saved to parquet file successfully")
 except Exception as e:
     logging.error(f"Failed to saved Dataframe to Parquet file: {e}")
