@@ -76,3 +76,55 @@
 2025-09-16 11:58:07,331 - INFO - DuckDB table created and Dataframe savec successfully
 2025-09-16 11:58:07,353 - INFO - Dataframe saved to parquet file successfully
 2025-09-16 11:58:07,363 - INFO - Weather table created/updated
+2025-09-16 15:10:25,160 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid={'300e45999bbcb67591f843c8f5f1917d'}&units=metric successful
+2025-09-16 15:10:25,161 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 15:10:25,162 - INFO - Data treatment successful
+2025-09-16 15:10:25,180 - INFO - Connection to DuckDB successful
+2025-09-16 15:10:25,187 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 15:10:25,200 - ERROR - Failed to saved Dataframe to Parquet file: Cannot save file into a non-existent directory: '..\..\shraed_data'
+2025-09-16 15:13:03,885 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-16 15:13:03,887 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 15:13:03,889 - INFO - Data treatment successful
+2025-09-16 15:13:03,914 - INFO - Connection to DuckDB successful
+2025-09-16 15:13:03,921 - ERROR - Failed to create table and to save Dataframe: Binder Error: table weather has 2 columns but 26 values were supplied
+2025-09-16 15:15:42,625 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-16 15:15:42,626 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 15:15:42,627 - INFO - Data treatment successful
+2025-09-16 15:15:42,641 - INFO - Connection to DuckDB successful
+2025-09-16 15:15:42,650 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 15:15:42,666 - ERROR - Failed to saved Dataframe to Parquet file: Cannot save file into a non-existent directory: '..\..\shraed_data'
+2025-09-16 15:16:33,228 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-16 15:16:33,229 - INFO - JSON data converted to a DataFrame successfully
+2025-09-16 15:16:33,231 - INFO - Data treatment successful
+2025-09-16 15:16:33,254 - INFO - Connection to DuckDB successful
+2025-09-16 15:16:33,268 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-16 15:16:33,288 - INFO - Dataframe saved to parquet file successfully
+2025-09-16 15:16:33,299 - INFO - Weather table created/updated
+2025-09-17 09:28:19,693 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-17 09:28:19,694 - INFO - JSON data converted to a DataFrame successfully
+2025-09-17 09:28:19,695 - INFO - Data treatment successful
+2025-09-17 09:28:19,716 - INFO - Columns dropped successfully
+2025-09-17 09:28:19,730 - INFO - Connection to DuckDB successful
+2025-09-17 09:28:19,739 - ERROR - Failed to create table and to save Dataframe: Binder Error: table weather has 26 columns but 18 values were supplied
+2025-09-17 09:28:43,432 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-17 09:28:43,433 - INFO - JSON data converted to a DataFrame successfully
+2025-09-17 09:28:43,434 - INFO - Data treatment successful
+2025-09-17 09:28:43,447 - INFO - Columns dropped successfully
+2025-09-17 09:28:43,469 - INFO - Connection to DuckDB successful
+2025-09-17 09:28:43,474 - ERROR - Failed to create table and to save Dataframe: Binder Error: table weather has 26 columns but 18 values were supplied
+2025-09-17 09:29:26,212 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-17 09:29:26,213 - INFO - JSON data converted to a DataFrame successfully
+2025-09-17 09:29:26,214 - INFO - Data treatment successful
+2025-09-17 09:29:26,226 - INFO - Columns dropped successfully
+2025-09-17 09:29:26,248 - INFO - Connection to DuckDB successful
+2025-09-17 09:29:26,255 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-17 09:29:26,463 - INFO - Dataframe saved to parquet file successfully
+2025-09-17 09:29:26,471 - INFO - Weather table created/updated
+2025-09-17 16:55:44,050 - INFO - Request to http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=300e45999bbcb67591f843c8f5f1917d&units=metric successful
+2025-09-17 16:55:44,051 - INFO - JSON data converted to a DataFrame successfully
+2025-09-17 16:55:44,053 - INFO - Data treatment successful
+2025-09-17 16:55:44,067 - INFO - Columns dropped successfully
+2025-09-17 16:55:44,091 - INFO - Connection to DuckDB successful
+2025-09-17 16:55:44,099 - INFO - DuckDB table created and Dataframe savec successfully
+2025-09-17 16:55:44,118 - INFO - Dataframe saved to parquet file successfully
+2025-09-17 16:55:44,127 - INFO - Weather table created/updated

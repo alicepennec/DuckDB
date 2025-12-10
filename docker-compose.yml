@@ -1,21 +1,28 @@
 version: '3.8'
 
 services:
-  duckdb:
+  tp1:
     build: ./TP1
     volumes:
       - ./shared_data:/data
 
-  etl:
-    build: ./TP2/etl
+  tp2:
+    build: ./TP2
     container_name: duckdb_etl
     volumes:
       - ./shared_data:/data
 
   streamlit:
-    build: ./TP2/streamlit
+    build: ./TP3
     container_name: duckdb_streamlit
     ports:
       - "8501:8501"
     volumes:
       - ./shared_data:/data:ro
+  
+  tp4:
+    build: ./TP4
+    container_name: duckdb_jo
+    volumes:
+      - ./shared_data:/data
+      - ./parquet_data:/data
